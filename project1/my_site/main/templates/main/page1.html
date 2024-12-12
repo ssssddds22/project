@@ -6,57 +6,60 @@
     <link rel="stylesheet" href="styleguide.css" />
     <link rel="stylesheet" href="style.css" />
     <style>
-        .macbook-air {
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-}
+  .bridge-designer-container {
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: #000;
+    padding: 143px 80px;
+    font: 400 var(--Display-Small-Size, 36px) var(--Display-Small-Font, Roboto);
+  }
 
-.macbook-air .div {
-  background-color: #ffffff;
-  width: 1280px;
-  height: 832px;
-  position: relative;
-}
+  .main-title {
+    line-height: var(--Display-Small-Line-Height, 44px);
+    letter-spacing: var(--Display-Medium-Tracking, 0px);
+    align-self: start;
+  }
 
-.macbook-air .text-wrapper {
-  width: 596px;
-  top: 126px;
-  left: 173px;
-  position: absolute;
-  font-family: var(--m3-display-small-font-family);
-  font-weight: var(--m3-display-small-font-weight);
-  color: #000000;
-  font-size: var(--m3-display-small-font-size);
-  letter-spacing: var(--m3-display-small-letter-spacing);
-  line-height: var(--m3-display-small-line-height);
-  font-style: var(--m3-display-small-font-style);
-}
+  .subtitle {
+    color: rgba(0, 0, 0, 1);
+    align-self: center;
+    margin-top: 254px;
+    font: 12px Inter, sans-serif;
+  }
 
-.macbook-air .text-wrapper-2 {
-  width: 420px;
-  top: 601px;
-  left: 846px;
-  position: absolute;
-  font-family: var(--m3-display-small-font-family);
-  font-weight: var(--m3-display-small-font-weight);
-  color: #000000;
-  font-size: var(--m3-display-small-font-size);
-  letter-spacing: var(--m3-display-small-letter-spacing);
-  line-height: var(--m3-display-small-line-height);
-  font-style: var(--m3-display-small-font-style);
-}
+  .authors {
+    line-height: var(--Display-Small-Line-Height, 44px);
+    letter-spacing: var(--Display-Medium-Tracking, 0px);
+    align-self: end;
+    margin-top: 173px;
+  }
 
-    </style>
-</head>
-  <body>
-    <div class="macbook-air">
-      <div class="div">
-        <div class="text-wrapper">Онлайн Проектрировщий Мостов</div>
-        <div class="text-wrapper-2">Кузьмина, Жеребцов, Соловьев</div>
-      </div>
-    </div>
-  </body>
+  @media (max-width: 991px) {
+    .bridge-designer-container {
+      padding: 100px 20px;
+    }
+
+    .main-title {
+      max-width: 100%;
+    }
+
+    .subtitle {
+      margin-top: 40px;
+    }
+
+    .authors {
+      margin-top: 40px;
+    }
+  }
+</style>
+
+<div class="bridge-designer-container">
+  <div class="main-title">Онлайн Проектрировщий Мостов</div>
+  <div class="authors">Кузьмина, Жеребцов, Соловьев</div>
+</div>
+<body>    
+</body>
 </html>
+
