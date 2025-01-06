@@ -6,59 +6,430 @@
     <link rel="stylesheet" href="styleguide.css" />
     <link rel="stylesheet" href="style.css" />
     <style>
-  .bridge-designer-container {
-    background-color: rgba(255, 255, 255, 1);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    color: #000;
-    padding: 143px 80px;
-    font: 400 var(--Display-Small-Size, 36px) var(--Display-Small-Font, Roboto);
-  }
-
-  .main-title {
-    line-height: var(--Display-Small-Line-Height, 44px);
-    letter-spacing: var(--Display-Medium-Tracking, 0px);
-    align-self: start;
-  }
-
-  .subtitle {
-    color: rgba(0, 0, 0, 1);
-    align-self: center;
-    margin-top: 254px;
-    font: 12px Inter, sans-serif;
-  }
-
-  .authors {
-    line-height: var(--Display-Small-Line-Height, 44px);
-    letter-spacing: var(--Display-Medium-Tracking, 0px);
-    align-self: end;
-    margin-top: 173px;
-  }
-
-  @media (max-width: 991px) {
-    .bridge-designer-container {
-      padding: 100px 20px;
-    }
-
-    .main-title {
-      max-width: 100%;
-    }
-
-    .subtitle {
-      margin-top: 40px;
-    }
-
-    .authors {
-      margin-top: 40px;
-    }
-  }
-</style>
-
-<div class="bridge-designer-container">
-  <div class="main-title">Онлайн Проектрировщий Мостов</div>
-  <div class="authors">Кузьмина, Жеребцов, Соловьев</div>
-</div>
+      @media (min-width: 2560px) {
+        .header-nav {
+          font: 42px/1.5 Roboto, sans-serif;
+          gap: 60px;
+          max-width: 2400px;
+          margin: 0 auto;
+        }
+        .nav-links {
+          gap: 120px;
+        }
+        .logo {
+          width: 64px;
+        }
+      }
+      .about-section {
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin-bottom: -4px;
+        padding: 40px 80px 75px;
+      }
+      @media (max-width: 991px) {
+        .about-section {
+          padding: 0 20px;
+        }
+      }
+      .header-container {
+        display: flex;
+        margin-left: 16px;
+        width: 100%;
+        max-width: 2560px;
+        gap: 40px;
+        color: #343333;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font: 400 32px/1 Roboto, sans-serif;
+      }
+      @media (max-width: 991px) {
+        .header-container {
+          max-width: 100%;
+        }
+      }
+      .nav-menu {
+        align-self: start;
+        display: flex;
+        margin-top: 9px;
+        gap: 40px 95px;
+      }
+      @media (max-width: 991px) {
+        .nav-menu {
+          max-width: 100%;
+        }
+      }
+      .nav-item-active {
+        font-weight: 700;
+      }
+      .nav-item {
+        flex-basis: auto;
+      }
+      .logo {
+        aspect-ratio: 1;
+        object-fit: contain;
+        object-position: center;
+        width: 54px;
+      }
+      .hero-section {
+        margin-top: 64px;
+        width: 100%;
+        max-width: 2332px;
+      }
+      @media (max-width: 991px) {
+        .hero-section {
+          max-width: 100%;
+          margin-top: 40px;
+        }
+      }
+      .hero-content {
+        gap: 20px;
+        display: flex;
+      }
+      @media (max-width: 991px) {
+        .hero-content {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0;
+        }
+      }
+      .content-column {
+        display: flex;
+        flex-direction: column;
+        line-height: normal;
+        width: 50%;
+        margin-left: 0;
+      }
+      @media (max-width: 991px) {
+        .content-column {
+          width: 100%;
+        }
+      }
+      .hero-image {
+        aspect-ratio: 2.93;
+        object-fit: contain;
+        object-position: center;
+        width: 100%;
+        flex-grow: 1;
+      }
+      @media (max-width: 991px) {
+        .hero-image {
+          max-width: 100%;
+          margin-top: 40px;
+        }
+      }
+      .text-column {
+        display: flex;
+        flex-direction: column;
+        line-height: normal;
+        width: 50%;
+        margin-left: 20px;
+      }
+      @media (max-width: 991px) {
+        .text-column {
+          width: 100%;
+        }
+      }
+      .text-overlay {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        min-height: 393px;
+        flex-grow: 1;
+        color: #fff;
+        padding: 81px 70px;
+        font: 400 48px/58px Roboto, sans-serif;
+      }
+      @media (max-width: 991px) {
+        .text-overlay {
+          max-width: 100%;
+          font-size: 40px;
+          line-height: 54px;
+          margin-top: 40px;
+          padding: 0 20px;
+        }
+      }
+      .overlay-bg {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+      .features-section {
+        margin-top: 53px;
+        width: 100%;
+        max-width: 2332px;
+      }
+      @media (max-width: 991px) {
+        .features-section {
+          max-width: 100%;
+          margin-top: 40px;
+        }
+      }
+      .features-content {
+        gap: 20px;
+        display: flex;
+      }
+      @media (max-width: 991px) {
+        .features-content {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0;
+        }
+      }
+      .feature-description {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        min-height: 673px;
+        flex-grow: 1;
+        color: #fff;
+        padding: 124px 70px;
+        font: 400 40px/44px Roboto, sans-serif;
+      }
+      @media (max-width: 991px) {
+        .feature-description {
+          max-width: 100%;
+          margin-top: 40px;
+          padding: 100px 20px;
+        }
+      }
+      .benefits-column {
+        display: flex;
+        flex-direction: column;
+        line-height: normal;
+        width: 50%;
+        margin-left: 20px;
+      }
+      @media (max-width: 991px) {
+        .benefits-column {
+          width: 100%;
+        }
+      }
+      .benefits-wrapper {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        color: #fff;
+        font: 400 24px/36px Roboto, sans-serif;
+      }
+      @media (max-width: 991px) {
+        .benefits-wrapper {
+          max-width: 100%;
+          margin-top: 40px;
+        }
+      }
+      .benefits-card {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        min-height: 325px;
+        gap: 30px;
+        flex-wrap: wrap;
+        padding: 61px 44px;
+      }
+      @media (max-width: 991px) {
+        .benefits-card {
+          padding: 0 20px;
+        }
+      }
+      .card-icon {
+        aspect-ratio: 1;
+        object-fit: contain;
+        object-position: center;
+        width: 102px;
+        max-width: 100%;
+        margin: auto 0;
+      }
+      .benefits-list {
+        position: relative;
+        flex-grow: 1;
+        width: 879px;
+        flex-basis: auto;
+      }
+      @media (max-width: 991px) {
+        .benefits-list {
+          max-width: 100%;
+        }
+      }
+      .advantages-card {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        min-height: 325px;
+        margin-top: 23px;
+        gap: 38px;
+        flex-wrap: wrap;
+        padding: 79px 44px;
+      }
+      @media (max-width: 991px) {
+        .advantages-card {
+          padding: 0 20px;
+        }
+      }
+      .advantages-icon {
+        aspect-ratio: 1;
+        object-fit: contain;
+        object-position: center;
+        width: 103px;
+        max-width: 100%;
+        margin: auto 0;
+      }
+      .advantages-list {
+        position: relative;
+        flex-grow: 1;
+        width: 869px;
+        flex-basis: auto;
+      }
+      @media (max-width: 991px) {
+        .advantages-list {
+          max-width: 100%;
+        }
+      }
+      .cta-section {
+        display: flex;
+        margin-top: 65px;
+        width: 100%;
+        max-width: 2330px;
+        align-items: flex-start;
+        gap: 20px;
+        color: var(--White, #fff);
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: var(--Headline-Small-Tracking, 0);
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font: 400 48px/36px Roboto;
+      }
+      @media (max-width: 991px) {
+        .cta-section {
+          max-width: 100%;
+          margin-top: 40px;
+          font-size: 40px;
+        }
+      }
+      .logo-footer {
+        aspect-ratio: 9.43;
+        object-fit: contain;
+        object-position: center;
+        width: 254px;
+        align-self: end;
+        margin-top: 156px;
+        max-width: 100%;
+      }
+      @media (max-width: 991px) {
+        .logo-footer {
+          margin-top: 40px;
+        }
+      }
+      .cta-button {
+        align-self: start;
+        border-radius: 391px;
+        background: var(--Accent, #2f62f6);
+        min-height: 168px;
+        gap: 10px;
+        padding: 66px 48px;
+        border: none;
+        color: inherit;
+        font: inherit;
+        cursor: pointer;
+      }
+      @media (max-width: 991px) {
+        .cta-button {
+          max-width: 100%;
+          font-size: 40px;
+          padding: 0 20px;
+        }
+      }
+      .bold-text {
+        font-weight: 700;
+      }
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        border: 0;
+      }
+    </style>
+    
+    <section class="about-section">
+      <header class="header-container">
+        <nav class="nav-menu" role="navigation" aria-label="Main navigation">
+          <a href="#about" class="nav-item-active">О ПРОЕКТЕ</a>
+          <a href="#theory" class="nav-item">ТЕОРИЯ</a>
+          <a href="#examples" class="nav-item">ПРИМЕРЫ</a>
+          <a href="#contacts" class="nav-item">КОНТАКТЫ</a>
+        </nav>
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2518e409fecfa2c9e30fbed31abe0010cfbe09d643f303c7791d06322b3e8f1f?placeholderIfAbsent=true&apiKey=8f78af374d1a4dcb8c7332179435552e" alt="" class="logo" />
+      </header>
+    
+      <div class="hero-section">
+        <div class="hero-content">
+          <div class="content-column">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4a3e90f5-3181-4fc9-9ea5-81218dde07f8?placeholderIfAbsent=true&apiKey=8f78af374d1a4dcb8c7332179435552e" alt="Bridge construction visualization" class="hero-image" />
+          </div>
+          <div class="text-column">
+            <div class="text-overlay">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/154f0069067e171d16a6bfa37d02dff9893296ec48e82e9a600cb87b3f8e4727?placeholderIfAbsent=true&apiKey=8f78af374d1a4dcb8c7332179435552e" alt="" class="overlay-bg" />
+              <p>Расчет, анализ и виртуальные испытания проектируемых и существующих сооружений: от простых пешеходных переходов до уникальных конструкций.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="features-section">
+        <div class="features-content">
+          <div class="content-column">
+            <div class="feature-description">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7a7adc19c8db0401432d2b760b978a5ef658593a67a8c04f3ab9843178966557?placeholderIfAbsent=true&apiKey=8f78af374d1a4dcb8c7332179435552e" alt="" class="overlay-bg" />
+              <p>Онлайн-сервис проектировщика мостов представляет собой современное программное обеспечение, предназначенное для оптимизации процесса проектирования мостовых конструкций. Использование данного инструмента позволяет инженерам значительно сократить временные затраты на разработку проектов, повысить точность расчетов и минимизировать риски возникновения ошибок.</p>
+            </div>
+          </div>
+          <div class="benefits-column">
+            <div class="benefits-wrapper">
+              <div class="benefits-card">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1077787444846f5b63d71301f4ce6751a17e6d805d373f62138cae7c34ba157f?placeholderIfAbsent=true&apiKey=8f78af374d1a4dcb8c7332179435552e" alt="" class="overlay-bg" />
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4bbf210f8581bc291305c7318a7458db54545d89724a70b3faee3816f883bfd7?placeholderIfAbsent=true&apiKey=8f78af374d1a4dcb8c7332179435552e" alt="Features icon" class="card-icon" />
+                <div class="benefits-list">
+                  <p class="bold-text">Основные функции сервиса включают:</p>
+                  <ul>
+                    <li>Автоматизированное создание чертежей и схем;</li>
+                    <li>Проведение комплексных инженерных расчетов с учетом всех нормативных требований;</li>
+                    <li>Визуализация проекта в 3D формате для детального анализа конструкции;</li>
+                    <li>Возможность интеграции с другими инженерными программами.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="advantages-card">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/db1878275780f53ca224247c10b4cddb4f8b2017d4e4754d14c48ef5aac21e5d?placeholderIfAbsent=true&apiKey=8f78af374d1a4dcb8c7332179435552e" alt="" class="overlay-bg" />
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d3750dd8f4281af0b49675ac9f814216dd6019e7e9c1b3689bc0af68881bbdea?placeholderIfAbsent=true&apiKey=8f78af374d1a4dcb8c7332179435552e" alt="Benefits icon" class="advantages-icon" />
+                <div class="advantages-list">
+                  <p class="bold-text">Преимущества использования онлайн-проектировщика мостов:</p>
+                  <ul>
+                    <li>Доступность в любое время и с любого устройства;</li>
+                    <li>Обеспечение высокой точности и надежности результатов;</li>
+                    <li>Экономия ресурсов за счет автоматизации рутинных задач;</li>
+                    <li>Постоянная поддержка и обновления программного обеспечения.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="cta-section">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8ebed8169e8b94dad1ddd3cf2938f6e21dbf509f56ac31ce7579eececd26d2c9?placeholderIfAbsent=true&apiKey=8f78af374d1a4dcb8c7332179435552e" alt="" class="logo-footer" />
+        <button class="cta-button" tabindex="0">НАЧАТЬ ПРОЕКТИРОВАТЬ</button>
+      </div>
+    </section>
 <body>    
 </body>
 </html>
