@@ -2,23 +2,100 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, intial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мост Проект</title>
     <style>
-            a {color: black;
-            font-size: 20px;
-            font-family: Inter;
-            font-weight: 500;
-            line-height: 30px;
-            text-decoration: none}
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #a67163; /* Цвет фона страницы */
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-            a:hover {color: red;}
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            text-align: center;
+            background-color: #8c5c52; /* Цвет фона блока */
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
 
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
 
-        
+        .navbar a {
+            text-decoration: none;
+            color: #ffffff;
+            margin: 0 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .content {
+            margin-bottom: 40px;
+        }
+
+        .content h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #3b82f6; /* Синий цвет кнопки */
+            color: #ffffff;
+            padding: 12px 24px;
+            font-size: 18px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .btn-primary:hover {
+            background-color: #2563eb; /* Цвет при наведении */
+        }
     </style>
 </head>
 <body>
-    <a href='page'>Онлайн проектировщик мостов</a>
+    <div class="container">
+        <div class="navbar">
+            <span class="logo">Глав.стр</span>
+            <div>
+                <a href="#about">О проекте</a>
+                <a href="#theory">Теория</a>
+                <a href="#examples">Примеры</a>
+                <a href="#contacts">Контакты</a>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Мост Проект</h1>
+            <p>Онлайн-конструктор мостов, мостовых переходов и эстакад различного типа и назначения</p>
+        </div>
+        <a href="#start" class="btn-primary">Начать проектировать</a>
+    </div>
 </body>
 </html>
