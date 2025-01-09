@@ -2,100 +2,259 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мост Проект</title>
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <style>
-        body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: #a67163; /* Цвет фона страницы */
-            color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+        .header-nav {
+          display: flex;
+          width: 100%;
+          gap: 20px;
+          color: rgba(52, 51, 51, 1);
+          flex-wrap: wrap;
+          justify-content: space-between;
+          font: 400 16px/44px Roboto, sans-serif;
         }
-
-        .container {
-            width: 80%;
-            max-width: 1200px;
-            text-align: center;
-            background-color: #8c5c52; /* Цвет фона блока */
-            border-radius: 8px;
-            padding: 40px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        
+        .nav-links {
+          display: flex;
+          gap: 40px 67px;
+          flex-wrap: wrap;
         }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 40px;
-        }
-
-        .navbar a {
-            text-decoration: none;
-            color: #ffffff;
-            margin: 0 10px;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        .navbar a:hover {
-            text-decoration: underline;
-        }
-
+        
         .logo {
-            font-size: 24px;
-            font-weight: bold;
+          aspect-ratio: 1;
+          object-fit: contain;
+          object-position: center;
+          width: 32px;
+          align-self: start;
         }
-
-        .content {
-            margin-bottom: 40px;
+        
+        .language-selector {
+          display: flex;
+          margin-top: 84px;
+          width: 390px;
+          max-width: 100%;
+          align-items: start;
+          gap: 20px;
+          justify-content: space-between;
         }
-
-        .content h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
+        
+        .lang-logo {
+          aspect-ratio: 2.02;
+          object-fit: contain;
+          object-position: center;
+          width: 103px;
+          max-width: 100%;
         }
-
-        .content p {
-            font-size: 18px;
-            line-height: 1.6;
+        
+        .lang-icons {
+          align-self: stretch;
+          display: flex;
+          align-items: start;
+          gap: 4px;
+          margin: auto 0;
         }
-
-        .btn-primary {
-            display: inline-block;
-            text-decoration: none;
-            background-color: #3b82f6; /* Синий цвет кнопки */
-            color: #ffffff;
-            padding: 12px 24px;
-            font-size: 18px;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-top: 20px;
+        
+        .lang-icon-main {
+          aspect-ratio: 1;
+          object-fit: contain;
+          object-position: center;
+          width: 30px;
+          align-self: stretch;
         }
-
-        .btn-primary:hover {
-            background-color: #2563eb; /* Цвет при наведении */
+        
+        .lang-icon-secondary {
+          aspect-ratio: 0.87;
+          object-fit: contain;
+          object-position: center;
+          width: 20px;
+          margin-top: 7px;
         }
-    </style>
+        
+        .lang-icon-group {
+          display: flex;
+          margin-top: 7px;
+          gap: 2px;
+        }
+        
+        .lang-icon-small {
+          aspect-ratio: 0.83;
+          object-fit: contain;
+          object-position: center;
+          width: 19px;
+        }
+        
+        .lang-options {
+          display: flex;
+          margin-top: 16px;
+          gap: 5px;
+        }
+        
+        .lang-option-group {
+          display: flex;
+          align-items: flex-start;
+          gap: 4px;
+        }
+        
+        .lang-option-icon {
+          aspect-ratio: 0.73;
+          object-fit: contain;
+          object-position: center;
+          width: 22px;
+          align-self: start;
+        }
+        
+        .lang-option-secondary {
+          aspect-ratio: 0.61;
+          object-fit: contain;
+          object-position: center;
+          width: 19px;
+          align-self: start;
+          margin-top: 7px;
+        }
+        
+        .lang-option-tertiary {
+          aspect-ratio: 0.87;
+          object-fit: contain;
+          object-position: center;
+          width: 20px;
+          margin: auto 0;
+        }
+        
+        .lang-option-small {
+          aspect-ratio: 0.83;
+          object-fit: contain;
+          object-position: center;
+          width: 19px;
+          margin: auto 0;
+        }
+        
+        .lang-option-pair {
+          display: flex;
+          gap: 1px;
+          margin: auto 0;
+        }
+        
+        .hero-title {
+          color: rgba(255, 255, 255, 1);
+          align-self: start;
+          margin-top: 26px;
+          font: 400 24px/28px Roboto, sans-serif;
+        }
+        
+        .cta-button {
+          align-self: end;
+          border-radius: 391px;
+          background: var(--Accent, #2f62f6);
+          margin-top: 366px;
+          min-height: 78px;
+          color: var(--White, #fff);
+          text-align: center;
+          text-transform: uppercase;
+          letter-spacing: var(--Headline-Small-Tracking, 0px);
+          padding: 21px 45px;
+          font: 400 24px/36px Roboto, sans-serif;
+          cursor: pointer;
+        }
+        
+        .main-container {
+            background-image: url('');
+            background-size: cover; /* или contain, если важно сохранить пропорции */
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            padding: 15px 60px 91px;
+        }
+        
+        @media (max-width: 991px) {
+          .main-container {
+            padding: 0 20px;
+          }
+          
+          .header-nav {
+            max-width: 100%;
+            margin-right: 5px;
+          }
+          
+          .nav-links {
+            max-width: 100%;
+          }
+          
+          .language-selector {
+            margin: 40px 0 0 5px;
+          }
+          
+          .hero-title {
+            max-width: 100%;
+          }
+          
+          .cta-button {
+            margin-top: 40px;
+            padding: 0 20px;
+            font: 400 16px/44px Roboto, sans-serif;
+          }
+        }
+        
+        .visually-hidden {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          border: 0;
+        }
+        
+        </style>
+        
+        <div class="main-container">
+          <nav class="header-nav">
+            <div class="nav-links">
+              <div tabindex="0" role="button">О ПРОЕКТЕ</div>
+              <div tabindex="0" role="button">ТЕОРИЯ</div>
+              <div tabindex="0" role="button">ПРИМЕРЫ</div>
+              <div tabindex="0" role="button">КОНТАКТЫ</div>
+            </div>
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/367bf299f54175b6b2c124d3b298a66eeca6205bca5fef15aa26b2d7b065baaf?placeholderIfAbsent=true&apiKey=8f78af374d1a4dcb8c7332179435552e" class="logo" alt="Bridge Constructor Logo" />
+          </nav>
+          
+          <div class="language-selector">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c042e0a036199ef8203044ab965cf4fd84d83f641a4a49f37c9b695642fe9076?placeholderIfAbsent=true&apiKey=8f78af374d1a4dcb8c7332179435552e" class="lang-logo" alt="Language Selection Logo" />
+            <div class="lang-icons">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f9635f5c7430d7b5ce5ac4940c510557359e54526a8c61ce69e2c8d90b2a6286?placeholderIfAbsent=true&apiKey=8f78af374d1a4dcb8c7332179435552e" class="lang-icon-main" alt="" />
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ba05290721f98c7a7d379d3208248533d9eb081a04fa37791d2e98e8ce3dd1b4?placeholderIfAbsent=true&apiKey=8f78af374d1a4dcb8c7332179435552e" class="lang-icon-secondary" alt="" />
+              <div class="lang-icon-group">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0a0f680763e38a03de22201cd32b23c1004499609d8539df5846660921af5d09?placeholderIfAbsent=true&apiKey=8f78af374d1a4dcb8c7332179435552e" class="lang-icon-small" alt="" />
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a042eca750226a49d9ba02ab7e76a39bb3fd6c0b4ce12ca8a9d9527fd6541e52?placeholderIfAbsent=true&apiKey=8f78af374d1a4dcb8c7332179435552e" class="lang-icon-small" alt="" />
+              </div>
+            </div>
+            <div class="lang-options">
+              <div class="lang-option-group">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7cd836d49b82587f83bdc591e5b94928ac503fac8745c9f2c6038bebe2b1c13a?placeholderIfAbsent=true&apiKey=8f78af374d1a4dcb8c7332179435552e" class="lang-option-icon" alt="" />
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/861dff6b1714e9dbe1aeab9e3731f1d05deea930b52f39b87efbcd633e9db012?placeholderIfAbsent=true&apiKey=8f78af374d1a4dcb8c7332179435552e" class="lang-option-secondary" alt="" />
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/96d22f772bce679797bf24ce7bd936958fc1df25920308f9b1ac2539771a9c55?placeholderIfAbsent=true&apiKey=8f78af374d1a4dcb8c7332179435552e" class="lang-option-tertiary" alt="" />
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f772a2fdb12c307e08fb9e3f2ab99904f810e120e3fc7f08f975367c00edbd18?placeholderIfAbsent=true&apiKey=8f78af374d1a4dcb8c7332179435552e" class="lang-option-small" alt="" />
+              </div>
+              <div class="lang-option-pair">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6fd78cf5588b6ad79694be588735fce0683d6624cf2090797bc7aa10895a7a8e?placeholderIfAbsent=true&apiKey=8f78af374d1a4dcb8c7332179435552e" class="lang-icon-small" alt="" />
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fd3442491985753679b1265ef9abc396677d65ab2033fba1b58e65765f813ce1?placeholderIfAbsent=true&apiKey=8f78af374d1a4dcb8c7332179435552e" class="lang-icon-small" alt="" />
+              </div>
+            </div>
+          </div>
+          
+          <h1 class="hero-title">
+            Онлайн-конструктор мостов, мостовых<br />
+            переходов и эстакад различного типа<br />
+            и назначения
+          </h1>
+          
+          <button class="cta-button" tabindex="0">НАЧАТЬ ПРОЕКТИРОВАТЬ</button>
+        </div>
+    
 </head>
 <body>
-    <div class="container">
-        <div class="navbar">
-            <span class="logo">Глав.стр</span>
-            <div>
-                <a href="#about">О проекте</a>
-                <a href="#theory">Теория</a>
-                <a href="#examples">Примеры</a>
-                <a href="#contacts">Контакты</a>
-            </div>
-        </div>
-        <div class="content">
-            <h1>Мост Проект</h1>
-            <p>Онлайн-конструктор мостов, мостовых переходов и эстакад различного типа и назначения</p>
-        </div>
-        <a href="#start" class="btn-primary">Начать проектировать</a>
-    </div>
 </body>
 </html>
