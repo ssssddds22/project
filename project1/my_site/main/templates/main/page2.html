@@ -4,6 +4,259 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, intial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <style>
+        .contact-section {
+          background-color: #fff;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+          padding: 15px 60px 59px;
+        }
+        
+        .nav-container {
+          display: flex;
+          width: 100%;
+          gap: 20px;
+          color: #343333;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          font: 400 16px/44px Roboto, sans-serif;
+        }
+        
+        .nav-links {
+          display: flex;
+          gap: 40px 67px;
+          flex-wrap: wrap;
+        }
+        
+        .logo {
+          aspect-ratio: 1;
+          object-fit: contain;
+          object-position: center;
+          width: 32px;
+          align-self: start;
+        }
+        
+        .hero-image {
+          aspect-ratio: 3.47;
+          object-fit: contain;
+          object-position: center;
+          width: 385px;
+          max-width: 100%;
+          margin: 64px 0 0 82px;
+        }
+        
+        .section-title {
+          color: #343333;
+          align-self: start;
+          margin-top: 45px;
+          font: 400 24px/44px Roboto, sans-serif;
+        }
+        
+        .team-grid {
+          margin-top: 14px;
+        }
+        
+        .team-row {
+          gap: 20px;
+          display: flex;
+        }
+        
+        .team-member {
+          background-color: #d9d9d9;
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+          align-items: start;
+          color: #1e1e1e;
+          margin: 0 auto;
+          padding: 10px 30px 26px;
+          font: 14px/1 Roboto, sans-serif;
+        }
+        
+        .member-name {
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 2.2;
+        }
+        
+        .contact-info {
+          align-self: stretch;
+          display: flex;
+          margin-top: 34px;
+          gap: 17px;
+        }
+        
+        .contact-label {
+          font-weight: 400;
+        }
+        
+        .contact-value {
+          font-weight: 700;
+          flex-grow: 1;
+        }
+        
+        .phone-info {
+          display: flex;
+          margin-top: 16px;
+          gap: 16px;
+        }
+        
+        .cta-button {
+          align-self: stretch;
+          border-radius: 391px;
+          background: var(--Accent, #2f62f6);
+          min-height: 78px;
+          color: var(--White, #fff);
+          text-align: center;
+          text-transform: uppercase;
+          letter-spacing: var(--Headline-Small-Tracking, 0px);
+          padding: 21px 45px;
+          font: 400 24px/36px Roboto;
+          border: none;
+          cursor: pointer;
+        }
+        
+        @media (max-width: 991px) {
+          .contact-section {
+            padding: 0 20px;
+          }
+          
+          .nav-container {
+            max-width: 100%;
+            margin-right: 5px;
+          }
+          
+          .nav-links {
+            max-width: 100%;
+          }
+          
+          .hero-image {
+            margin: 40px 0 0 10px;
+          }
+          
+          .section-title {
+            margin-top: 40px;
+          }
+          
+          .team-grid {
+            max-width: 100%;
+            margin-right: 5px;
+          }
+          
+          .team-row {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0;
+          }
+          
+          .team-member {
+            margin-top: 40px;
+            padding: 0 20px;
+          }
+          
+          .cta-button {
+            margin-top: 40px;
+            padding: 0 20px;
+          }
+        }
+        </style>
+        
+        <section class="contact-section">
+          <nav class="nav-container">
+            <div class="nav-links">
+              <div>О ПРОЕКТЕ</div>
+              <div>ТЕОРИЯ</div>
+              <div>ПРИМЕРЫ</div>
+              <div>КОНТАКТЫ</div>
+            </div>
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7082f07c2650e46b4b21187ee54647b4fb78bf876d61538596dbe1af6192978f?placeholderIfAbsent=true&apiKey=59f28eeff0d54a489ea23ebcb4424255" alt="" class="logo" />
+          </nav>
+        
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7359f26a6e97509856678b5d12cc77c5ffb07fddec4a818b799c07637396afc2?placeholderIfAbsent=true&apiKey=59f28eeff0d54a489ea23ebcb4424255" alt="" class="hero-image" />
+          
+          <h2 class="section-title">Команда проекта:</h2>
+        
+          <div class="team-grid">
+            <div class="team-row">
+              <div class="team-member">
+                <h3 class="member-name">Иван Жеребцов</h3>
+                <div class="contact-info">
+                  <span class="contact-label">e-mail</span>
+                  <span class="contact-value">i.zherebtsov@gmail.com</span>
+                </div>
+                <div class="phone-info">
+                  <span class="contact-label">phone</span>
+                  <span class="contact-value">+7 (964) 577-30-41</span>
+                </div>
+              </div>
+        
+              <div class="team-member">
+                <h3 class="member-name">Иван Жеребцов</h3>
+                <div class="contact-info">
+                  <span class="contact-label">e-mail</span>
+                  <span class="contact-value">i.zherebtsov@gmail.com</span>
+                </div>
+                <div class="phone-info">
+                  <span class="contact-label">phone</span>
+                  <span class="contact-value">+7 (964) 577-30-41</span>
+                </div>
+              </div>
+        
+              <div class="team-member">
+                <h3 class="member-name">Иван Жеребцов</h3>
+                <div class="contact-info">
+                  <span class="contact-label">e-mail</span>
+                  <span class="contact-value">i.zherebtsov@gmail.com</span>
+                </div>
+                <div class="phone-info">
+                  <span class="contact-label">phone</span>
+                  <span class="contact-value">+7 (964) 577-30-41</span>
+                </div>
+              </div>
+            </div>
+        
+            <div class="team-row">
+              <div class="team-member">
+                <h3 class="member-name">Иван Жеребцов</h3>
+                <div class="contact-info">
+                  <span class="contact-label">e-mail</span>
+                  <span class="contact-value">i.zherebtsov@gmail.com</span>
+                </div>
+                <div class="phone-info">
+                  <span class="contact-label">phone</span>
+                  <span class="contact-value">+7 (964) 577-30-41</span>
+                </div>
+              </div>
+        
+              <div class="team-member">
+                <h3 class="member-name">Иван Жеребцов</h3>
+                <div class="contact-info">
+                  <span class="contact-label">e-mail</span>
+                  <span class="contact-value">i.zherebtsov@gmail.com</span>
+                </div>
+                <div class="phone-info">
+                  <span class="contact-label">phone</span>
+                  <span class="contact-value">+7 (964) 577-30-41</span>
+                </div>
+              </div>
+        
+              <div class="team-member">
+                <h3 class="member-name">Иван Жеребцов</h3>
+                <div class="contact-info">
+                  <span class="contact-label">e-mail</span>
+                  <span class="contact-value">i.zherebtsov@gmail.com</span>
+                </div>
+                <div class="phone-info">
+                  <span class="contact-label">phone</span>
+                  <span class="contact-value">+7 (964) 577-30-41</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <button class="cta-button" tabindex="0">НАЧАТЬ ПРОЕКТИРОВАТЬ</button>
+        </section>
 </head>
 <body>
 </body>

@@ -1,101 +1,248 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мост Проект</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: #a67163; /* Цвет фона страницы */
-            color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .container {
-            width: 80%;
-            max-width: 1200px;
-            text-align: center;
-            background-color: #8c5c52; /* Цвет фона блока */
-            border-radius: 8px;
-            padding: 40px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 40px;
-        }
-
-        .navbar a {
-            text-decoration: none;
-            color: #ffffff;
-            margin: 0 10px;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        .navbar a:hover {
-            text-decoration: underline;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .content {
-            margin-bottom: 40px;
-        }
-
-        .content h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        .content p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-        .btn-primary {
-            display: inline-block;
-            text-decoration: none;
-            background-color: #3b82f6; /* Синий цвет кнопки */
-            color: #ffffff;
-            padding: 12px 24px;
-            font-size: 18px;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-
-        .btn-primary:hover {
-            background-color: #2563eb; /* Цвет при наведении */
-        }
+<style>
+    .contact-section {
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      padding: 15px 60px 59px;
+    }
+    
+    .header-nav {
+      display: flex;
+      width: 100%;
+      gap: 20px;
+      color: #343333;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font: 400 16px/44px Roboto, sans-serif;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 40px 67px;
+      flex-wrap: wrap;
+    }
+    
+    .logo {
+      aspect-ratio: 1;
+      object-fit: contain;
+      width: 32px;
+    }
+    
+    .hero-image {
+      aspect-ratio: 3.47;
+      object-fit: contain;
+      width: 385px;
+      max-width: 100%;
+      margin: 64px 0 0 82px;
+    }
+    
+    .section-title {
+      color: #343333;
+      margin-top: 45px;
+      font: 400 24px/44px Roboto, sans-serif;
+    }
+    
+    .team-grid {
+      margin-top: 14px;
+    }
+    
+    .team-row {
+      gap: 20px;
+      display: flex;
+    }
+    
+    .team-member {
+      background: #d9d9d9;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: start;
+      color: #1e1e1e;
+      padding: 10px 30px 26px;
+      font: 14px/1 Roboto, sans-serif;
+    }
+    
+    .member-name {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 2.2;
+    }
+    
+    .contact-info {
+      align-self: stretch;
+      display: flex;
+      margin-top: 34px;
+      gap: 17px;
+    }
+    
+    .info-label {
+      font-weight: 400;
+    }
+    
+    .info-value {
+      font-weight: 700;
+      flex-grow: 1;
+    }
+    
+    .phone-info {
+      display: flex;
+      margin-top: 16px;
+      gap: 16px;
+    }
+    
+    .cta-button {
+      align-self: stretch;
+      border-radius: 391px;
+      background: var(--Accent, #2f62f6);
+      min-height: 78px;
+      color: var(--White, #fff);
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: var(--Headline-Small-Tracking, 0px);
+      padding: 21px 45px;
+      font: 400 24px/36px Roboto;
+      border: none;
+      cursor: pointer;
+    }
+    
+    @media (max-width: 991px) {
+      .contact-section {
+        padding: 0 20px;
+      }
+      
+      .header-nav {
+        max-width: 100%;
+        margin-right: 5px;
+      }
+      
+      .nav-links {
+        max-width: 100%;
+      }
+      
+      .hero-image {
+        margin: 40px 0 0 10px;
+      }
+      
+      .section-title {
+        margin-top: 40px;
+      }
+      
+      .team-grid {
+        max-width: 100%;
+        margin-right: 5px;
+      }
+      
+      .team-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+      
+      .team-member {
+        margin-top: 40px;
+        padding: 0 20px;
+      }
+      
+      .cta-button {
+        margin-top: 40px;
+        padding: 0 20px;
+      }
+    }
     </style>
-</head>
-<body>
-    <div class="container">
-        <div class="navbar">
-            <span class="logo">Глав.стр</span>
-            <div>
-                <a href="#about">О проекте</a>
-                <a href="#theory">Теория</a>
-                <a href="#examples">Примеры</a>
-                <a href="#contacts">Контакты</a>
+    
+    <div class="contact-section">
+      <nav class="header-nav">
+        <div class="nav-links">
+          <div>О ПРОЕКТЕ</div>
+          <div>ТЕОРИЯ</div>
+          <div>ПРИМЕРЫ</div>
+          <div>КОНТАКТЫ</div>
+        </div>
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7082f07c2650e46b4b21187ee54647b4fb78bf876d61538596dbe1af6192978f?placeholderIfAbsent=true&apiKey=59f28eeff0d54a489ea23ebcb4424255" alt="" class="logo" />
+      </nav>
+    
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7359f26a6e97509856678b5d12cc77c5ffb07fddec4a818b799c07637396afc2?placeholderIfAbsent=true&apiKey=59f28eeff0d54a489ea23ebcb4424255" alt="Project illustration" class="hero-image" />
+      
+      <h2 class="section-title">Команда проекта:</h2>
+    
+      <div class="team-grid">
+        <div class="team-row">
+          <div class="team-member">
+            <h3 class="member-name">Иван Жеребцов</h3>
+            <div class="contact-info">
+              <span class="info-label">e-mail</span>
+              <span class="info-value">i.zherebtsov@gmail.com</span>
             </div>
+            <div class="phone-info">
+              <span class="info-label">phone</span>
+              <span class="info-value">+7 (964) 577-30-41</span>
+            </div>
+          </div>
+    
+          <div class="team-member">
+            <h3 class="member-name">Иван Жеребцов</h3>
+            <div class="contact-info">
+              <span class="info-label">e-mail</span>
+              <span class="info-value">i.zherebtsov@gmail.com</span>
+            </div>
+            <div class="phone-info">
+              <span class="info-label">phone</span>
+              <span class="info-value">+7 (964) 577-30-41</span>
+            </div>
+          </div>
+    
+          <div class="team-member">
+            <h3 class="member-name">Иван Жеребцов</h3>
+            <div class="contact-info">
+              <span class="info-label">e-mail</span>
+              <span class="info-value">i.zherebtsov@gmail.com</span>
+            </div>
+            <div class="phone-info">
+              <span class="info-label">phone</span>
+              <span class="info-value">+7 (964) 577-30-41</span>
+            </div>
+          </div>
         </div>
-        <div class="content">
-            <h1>Мост Проект</h1>
-            <p>Онлайн-конструктор мостов, мостовых переходов и эстакад различного типа и назначения</p>
+    
+        <div class="team-row">
+          <div class="team-member">
+            <h3 class="member-name">Иван Жеребцов</h3>
+            <div class="contact-info">
+              <span class="info-label">e-mail</span>
+              <span class="info-value">i.zherebtsov@gmail.com</span>
+            </div>
+            <div class="phone-info">
+              <span class="info-label">phone</span>
+              <span class="info-value">+7 (964) 577-30-41</span>
+            </div>
+          </div>
+    
+          <div class="team-member">
+            <h3 class="member-name">Иван Жеребцов</h3>
+            <div class="contact-info">
+              <span class="info-label">e-mail</span>
+              <span class="info-value">i.zherebtsov@gmail.com</span>
+            </div>
+            <div class="phone-info">
+              <span class="info-label">phone</span>
+              <span class="info-value">+7 (964) 577-30-41</span>
+            </div>
+          </div>
+    
+          <div class="team-member">
+            <h3 class="member-name">Иван Жеребцов</h3>
+            <div class="contact-info">
+              <span class="info-label">e-mail</span>
+              <span class="info-value">i.zherebtsov@gmail.com</span>
+            </div>
+            <div class="phone-info">
+              <span class="info-label">phone</span>
+              <span class="info-value">+7 (964) 577-30-41</span>
+            </div>
+          </div>
         </div>
-        <a href="#start" class="btn-primary">Начать проектировать</a>
+      </div>
+    
+      <button class="cta-button" tabindex="0">НАЧАТЬ ПРОЕКТИРОВАТЬ</button>
     </div>
-</body>
-</html>
